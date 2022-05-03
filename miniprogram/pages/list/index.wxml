@@ -19,7 +19,7 @@
           <image class="checkbox" data-index='{{index}}' src="../../images/list/pending.png" catchtap="finishTodo"/>
           <view class="todo-info">
             <view class="todo-info_title">{{util.filterStr(item.title, 10)}}</view>
-            <view class="todo-info_date">{{util.filterStr(item.date, 10)}}</view>
+            <view class="todo-info_date">{{item.date}}</view>
             <view class="todo-info_desc">{{util.filterStr(item.desc, 10)}}</view>
           </view>
           <image wx:if="{{item.star}}" class="star" src="../../images/file/star.png" />
@@ -39,7 +39,7 @@
           <image class="checkbox" data-index='{{index}}' src="../../images/list/finished.png" bindtap="resetTodo"/>
           <view class="todo-info">
             <view class="todo-info_title done">{{util.filterStr(item.title, 10)}}</view>
-            <view class="todo-info_desc">{{util.filterStr(item.date, 10)}}</view>
+            <view class="todo-info_desc">{{item.date}}</view>
             <view class="todo-info_desc">{{util.filterStr(item.desc, 10)}}</view>
           </view>
         </view>
