@@ -6,6 +6,7 @@ Page({
     _id: '',
     title: '',
     desc: '',
+    date: '',
     files: [],
     fileName: '',
     freqOptions: ['未完成', '已完成'],
@@ -38,6 +39,7 @@ Page({
         this.setData({
           title: todo.title,
           desc: todo.desc,
+          date: todo.date,
           files: todo.files,
           fileName,
           freq: todo.freq
@@ -58,7 +60,11 @@ Page({
       desc: e.detail.value
     })
   },
-
+  onChooseDateFreq(e){
+    this.setData({
+      date: e.detail.value
+    })
+  },
   // 添加文件附件
   addFile() {
     // 如果文件过多则进行提示
@@ -152,6 +158,7 @@ Page({
       data: {
         title: this.data.title,
         desc: this.data.desc,
+        date: this.data.date,
         files: this.data.files,
         freq: Number(this.data.freq)
       }

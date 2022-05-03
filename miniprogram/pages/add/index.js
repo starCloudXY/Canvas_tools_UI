@@ -5,6 +5,7 @@ Page({
   data: {
     title: '',
     desc: '',
+    date:'',
     files: [],
     fileName: '',
     freqOptions: ['未完成', '已完成'],
@@ -63,6 +64,11 @@ Page({
       freq: e.detail.value
     })
   },
+  onChooseDateFreq(e) {
+    this.setData({
+      date: e.detail.value
+    })
+  },
 
   // 保存待办
   async saveTodo() {
@@ -95,6 +101,7 @@ Page({
     // 在数据库中新建待办事项，并填入已编辑对信息
     db.collection(getApp().globalData.collection).add({
       data: {
+        date:this.data.date,
         title: this.data.title,       // 待办标题
         desc: this.data.desc,         // 待办描述
         files: this.data.files,       // 待办附件列表
@@ -113,6 +120,7 @@ Page({
     this.setData({
       title: '',
       desc: '',
+      date:'',
       files: [],
       fileName: '',
       freqOptions: ['未完成', '已完成'],

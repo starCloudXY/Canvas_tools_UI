@@ -13,6 +13,17 @@
   </view>
   <view class="form-group">
     <view class="form-cell inline">
+      <view>截止日期</view>
+      <picker class="option" mode="date" value="{{date}}" start="2021-09-01" end="2030-09-01" bindchange="onChooseDateFreq">
+        {{date}}
+      </picker>
+      <picker class="selector" mode="date" value="{{date}}" start="2021-09-01" end="2030-09-01" bindchange="onChooseDateFreq">
+        <image class="selector" src="../../images/add/next.png" />
+      </picker>
+    </view>
+  </view>
+  <view class="form-group">
+    <view class="form-cell inline">
       <view>添加附件</view>
       <view class="upload-text" bindtap="addFile">
         {{(files.length === 0 ? "点击添加附件" : fileName)}}
@@ -21,10 +32,6 @@
     </view>
   </view>
   <view class="form-group">
-    <view class="form-cell inline">
-      <view>列表选择</view>
-      <view class="option">默认</view>
-    </view>
     <view class="form-cell inline">
       <view>事件状态</view>
       <picker class="option" bindchange="onChooseFreq" range="{{freqOptions}}">
