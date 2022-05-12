@@ -11,7 +11,17 @@ Page({
     freqOptions: ['未完成', '已完成'],
     freq: 0
   },
-
+  onLoad: function (options) {
+    wx.hideTabBar();
+    this.tabBar();
+  },
+  tabBar(){
+    if(typeof this.getTabBar === 'function' && this.getTabBar()){
+      this.getTabBar().setData({
+        selected:0
+      })
+    }
+  },
   // 表单输入处理函数
   onTitleInput(e) {
     this.setData({

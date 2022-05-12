@@ -1,3 +1,4 @@
+<cu-custom bgColor="bg-silentBlue" isCustom="{{true}}"><view slot="content">添加待办</view></cu-custom>
 <wxs module="util" src="../util.wxs" />
 <view class="container">
   <view class="form-group">
@@ -41,8 +42,9 @@
       </picker>
     </view>
   </view>
-  <view class="footer">
-    <view class="reset" bindtap="resetTodo">重置</view>
-    <view class="save" bindtap="saveTodo">保存</view>
-  </view>
+  <view class="flex solid-bottom padding justify-around">
+  <button class="cu-btn bg-silentBlue"bindtap="resetTodo">重置</button>
+  <button class="cu-btn line-blue " bindtap="saveTodo">保存</button>
+</view>
+
 </view>

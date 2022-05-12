@@ -1,0 +1,1 @@
+<cu-custom bgColor="bg-silentBlue" isCustom="{{true}}"><view slot="content">我的主页</view></cu-custom>

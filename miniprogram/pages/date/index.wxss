@@ -1,0 +1,4 @@
+/* pages/date/index.wxss */
+.box view.cu-bar {
+  margin-top: 20rpx; 
+}

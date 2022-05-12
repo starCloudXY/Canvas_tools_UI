@@ -6,7 +6,9 @@ Page({
     _id: '',
     todo: {
       title: '',
-      desc: '',
+      desc:{
+          step:'',
+      },
       date: '',
     },
     freqOptions: ['未完成', '已完成'],

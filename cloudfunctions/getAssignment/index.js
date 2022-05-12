@@ -1,16 +1,10 @@
-const {Builder} = import('selenium-webdriver')
+var webdriver = require('selenium-webdriver'), By = webdriver.By,
+    until = webdriver.until;
 
-    (async function myFunction() {
-      let driver = await new Builder().forBrowser('chrome').build();
+var driver = new webdriver.Builder().forBrowser('chrome').build();
 
-      // 导航到某个网站
-      await driver.get('https://baidu.com');
-      // 返回
-      await driver.navigate().back();
-      // 往前
-      await driver.navigate().forward();
-      // 刷新
-      await driver.navigate().refresh();
-
-      await driver.quit();
-    })();
+driver.get('https://www.baidu.com');
+driver.findElement(By.id('kw')).sendKeys('webdriver');
+driver.findElement(By.id('su')).click();
+driver.wait(until.titleIs('webdriver_百度搜索'), 1000);
+driver.quit();

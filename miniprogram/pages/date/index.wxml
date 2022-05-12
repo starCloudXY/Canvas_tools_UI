@@ -1,0 +1,73 @@
+<cu-custom bgColor="bg-silentBlue" isCustom="{{true}}"><view slot="content">我的日程</view></cu-custom>
+  <!-- 订单列表 -->
+
+
+<view class="cu-timeline">
+  <view class="cu-time">昨天</view>
+  <view class="cu-item cur cuIcon-noticefill">
+    <view class="content bg-treegreen shadow-blur">
+      <view class="content">
+      <text>22:22
+      </text> 
+      <text>日期：{{item.useDate}}</text>
+            <view>作业类型：
+             <text>{{item.cx}}</text>
+            </view>
+            <view>作业时间：
+             <text>{{item.time}}</text>
+            </view>
+            <view>截至日期：
+             <text>{{item.feiyong}}</text>
+            </view>
+      </view>
+    </view>
+  </view>
+  <block wx:for-items="{{carInfoData}}">
+  <view class="cu-item cur cuIcon-noticefill">
+    <view class="content bg-{{item.color}} shadow-blur">
+      <view class="content">
+      <text>22:22
+      </text> 
+      <text>日期：{{item.useDate}}</text>
+            <view>作业类型：
+             <text>{{item.cx}}</text>
+            </view>
+            <view>作业时间：
+             <text>{{item.time}}</text>
+            </view>
+            <view>截至日期：
+             <text>{{item.feiyong}}</text>
+            </view>
+      </view>
+    </view>
+  </view>
+  </block>
+</view>
+
+
+
+<view class="cu-timeline">
+  <view class="cu-time">06-17</view>
+  
+    <block wx:for-items="{{carInfoData}}">
+      <view class="cu-item">
+    <view class="content">
+      <view class="cu-capsule radius">
+        <view class="cu-tag bg-cyan">建立时间：</view>
+        <view class="cu-tag line-cyan">10：00</view>
+      </view>
+      <view class="margin-top">
+      <text>日期：{{item.useDate}}</text>
+            <view>作业类型：
+             <text>{{item.cx}}</text>
+            </view>
+            <view>截至日期：
+             <text>{{item.feiyong}}</text>
+            </view>
+      </view>
+    </view>
+  </view>
+    </block>
+
+</view>
+<view class="cu-bar bg-white" style="bottom:150"></view>

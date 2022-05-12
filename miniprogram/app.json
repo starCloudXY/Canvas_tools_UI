@@ -1,18 +1,66 @@
 {
   "pages": [
+    "pages/home/index",
     "pages/list/index",
     "pages/add/index",
     "pages/file/index",
     "pages/edit/index",
-    "pages/detail/index"
+    "pages/detail/index",
+    "pages/work/work",
+    "pages/mine/mine",
+    "pages/date/index",
+    "pages/about/log/log"
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "作业",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#39b54a",
+    "navigationBarTitleText": "Color UI",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
   },
   "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "tabBar": {
+    "custom": true,
+    "backgroundColor": "#ffffff",
+    "color": "#999999",
+    "selectedColor": "#545454",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/date/index",
+        "text": "日程"
+      },
+      {
+        "pagePath": "pages/add/index",
+        "text": "添加"
+      },
+      {
+        "pagePath": "pages/list/index",
+        "text": "清单"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的"
+      }
+    ]
+  },
+
+  "requiredBackgroundModes": [
+    "audio",
+    "location"
+  ],
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "plugins": {},
+  "resizable": false
 }

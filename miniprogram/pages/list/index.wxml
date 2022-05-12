@@ -1,10 +1,10 @@
+<cu-custom bgColor="bg-silentBlue" isCustom="{{true}}"><view slot="content">我的清单</view></cu-custom>
 <wxs module="util" src="../util.wxs" />
 
 <view class="container empty" wx:if="{{todos.length === 0}}">
   <image class="background" src="../../images/list/background.png" mode="aspectFit" />
   <view class="title">暂无待办</view>
   <view class="subtitle">有想法？赶紧记下来吧！</view>
-  <footer></footer>
 </view>
 
 <view class="container" wx:if="{{todos.length > 0}}">
@@ -46,5 +46,4 @@
       </mp-slideview>
     </view>
   </view>
-  <footer></footer>
 </view>

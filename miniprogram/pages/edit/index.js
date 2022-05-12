@@ -103,7 +103,12 @@ Page({
       freq: e.detail.value
     })
   },
-
+toHome(e){
+  wx.navigateTo({
+    // url: '/pages/show/show?id=' + id,
+    url: '/pages/home/index',
+  })
+},
   // 删除待办事项
   async deleteTodo() {
     const db = await getApp().database()

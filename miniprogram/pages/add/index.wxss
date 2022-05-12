@@ -56,3 +56,8 @@
   color: white;
   background: #353535;
 }
+.page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
